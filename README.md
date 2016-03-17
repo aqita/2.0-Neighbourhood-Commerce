@@ -1,2 +1,2 @@
-# business
-Business Facing Interface of Aqita
+# 2.0: Neighbourhood Commerce
+
