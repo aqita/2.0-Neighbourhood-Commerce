@@ -1,0 +1,259 @@
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+  transition: all 0.2s ease-in-out important;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23) !important;
+}
+.navbar-default {
+            background-color: #20B2AA;
+            border-color: #20B2AA;
+            height: 60px;
+        }
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+            color: #555;
+            cursor: default;
+            background-color: #fff;
+            border: 2px solid transparent;
+            border-bottom-color: #20B2AA;
+        }
+        .intro-section {
+            height: 100%;
+            padding-top: 60px;
+            text-align: center;
+            background: #fff;
+        }
+        .nav-tabs>li.active{
+            width: 33%;
+        }
+        .nav>li {
+            position: relative;
+            display: block;
+            width: 33%;
+        }
+        #search::-webkit-input-placeholder {
+           color: white;
+        }
+        #fixed{
+          z-index: 1000000;
+            position: fixed;
+            background: white;
+            width:100%;
+        }
+        .loginform
+        * { box-sizing:border-box; }
+
+
+        /* form starting stylings ------------------------------- */
+        .group            { 
+          position:relative; 
+          margin-bottom:45px; 
+        }
+        input               {
+          font-size:18px;
+          padding:10px 10px 10px 5px;
+          width:300px;
+          border:none;
+          border-bottom:1px solid #757575;
+        }
+        input:focus         { outline:none; }
+
+        /* LABEL ======================================= */
+        label                {
+          color:#999; 
+          font-size:18px;
+          font-weight:normal;
+          position:absolute;
+          pointer-events:none;
+          left:5px;
+          top:10px;
+          transition:0.2s ease all; 
+          -moz-transition:0.2s ease all; 
+          -webkit-transition:0.2s ease all;
+        }
+
+        /* active state */
+        input:focus ~ label, input:valid ~ label        {
+          top:-20px;
+          font-size:14px;
+          color:#5264AE;
+        }
+
+        /* BOTTOM BARS ================================= */
+        .bar    { position:relative; display:block; width:300px; }
+        .bar:before, .bar:after     {
+          content:'';
+          height:2px; 
+          width:0;
+          bottom:1px; 
+          position:absolute;
+          background:#5264AE; 
+          transition:0.2s ease all; 
+          -moz-transition:0.2s ease all; 
+          -webkit-transition:0.2s ease all;
+        }
+        .bar:before {
+          left:50%;
+        }
+        .bar:after {
+          right:50%; 
+        }
+
+        /* active state */
+        input:focus ~ .bar:before, input:focus ~ .bar:after {
+          width:50%;
+        }
+
+        /* HIGHLIGHTER ================================== */
+        .highlight {
+          position:absolute;
+          height:60%; 
+          width:100px; 
+          top:25%; 
+          left:0;
+          pointer-events:none;
+          opacity:0.5;
+        }
+
+        /* active state */
+        input:focus ~ .highlight {
+          -webkit-animation:inputHighlighter 0.3s ease;
+          -moz-animation:inputHighlighter 0.3s ease;
+          animation:inputHighlighter 0.3s ease;
+        }
+
+        /* ANIMATIONS ================ */
+        @-webkit-keyframes inputHighlighter {
+            from { background:#5264AE; }
+          to    { width:0; background:transparent; }
+        }
+        @-moz-keyframes inputHighlighter {
+            from { background:#5264AE; }
+          to    { width:0; background:transparent; }
+        }
+        @keyframes inputHighlighter {
+            from { background:#5264AE; }
+          to    { width:0; background:transparent; }
+        }
+
+        .chat
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat li
+        {
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dotted #B3A9A9;
+        }
+
+        .chat li.left .chat-body
+        {
+            margin-left: 60px;
+        }
+
+        .chat li.right .chat-body
+        {
+            margin-right: 60px;
+        }
+
+
+        .chat li .chat-body p
+        {
+            margin: 0;
+            color: #777777;
+        }
+
+        .panel .slidedown .glyphicon, .chat .glyphicon
+        {
+            margin-right: 5px;
+        }
+
+        .panel-body
+        {
+            overflow-y: scroll;
+            height: 250px;
+        }
+        #chat_bottom{
+          position: fixed;
+          bottom:0;
+        }
+        #bottom_id{
+          width:100%;
+        }
+        .container{
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        @media (min-width: 1200px){
+            .container {
+                width: 768px;
+            }
+            .navbar{
+              width:768px;
+            }
+            #fixed{
+              width:768px;
+              
+            }
+            .navbar-fixed-bottom, .navbar-fixed-top {
+                position: fixed;
+                right: 0;
+                left: 0;
+                z-index: 1030;
+            }
+            #logo{
+              padding-top:0px;
+            }
+            #logo_id{
+              padding-top:0px;
+              margin-right: 140px;
+              
+            }
+            #tagline{
+              font-weight: 600;
+            }
+            #bottom_id{
+              width:768px;
+            }
+
+        }
+
+         #newitem {
+    width: 160px;
+  }
+  #todolist {
+    width: 90%;
+    margin: 10px solid;
+    margin: 10px 10px;
+  }
+  #todolist li {
+    border-radius: 2px;
+    list-style: none;
+    background: #eee;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  #todolist li:nth-child(2n){
+    background: #ccc;
+  }
+  #todolist li:hover:after,
+  #todolist li.done:after {
+    content: '✔';
+    color: #060;
+    position: absolute;
+    right: 5px;    
+  }
+  #todolist li.done:hover:after {
+    content: 'x';
+    font-weight: bold;
+    color: #c00;
+    position: absolute;
+    right: 5px;    
+  }
+        

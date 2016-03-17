@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#ffff">
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/service_list_item_title"
+        android:text="Title"/>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_list_item_price"
+            android:textSize="16dp"
+            android:text="Price"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_list_item_qty"
+            android:textSize="16dp"
+            android:text="qty"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/edit"
+        android:scaleType="fitXY"
+        android:layout_margin="3dp"
+        android:background="#0fff"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:id="@+id/service_list_item_edit"/>
+
+    <ImageButton
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/cancel"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="3dp"
+        android:padding="8dp"
+        android:background="#0fff"
+        android:id="@+id/service_list_item_delete"/>
+
+</LinearLayout>

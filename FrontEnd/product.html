@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+      .container-fixed { margin: 0 auto; max-width: 600px; /* or 950px */ }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>AQITA</title>
+    <meta name="theme-color" content="#20B2AA">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="src/DateTimePicker.js"></script>
+    <script type="text/javascript" src="src/i18n/DateTimePicker-i18n.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripple.min.css" rel="stylesheet">
+    <script type="text/javascript">(function (d, n) {
+                var s, h;
+                s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://apps.applozic.com/sidebox.app";
+                h = document.getElementsByTagName('head')[0];
+                h.appendChild(s);
+                window.applozic = n;
+                n.init = function (t) {
+                    n._globals = t;
+                }
+            })(document, window.applozic || {});</script>
+            <style type="text/css">
+              .no-js #loader { display: none;  }
+              .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+              .se-pre-con {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 99999999888888;
+                background: url(img/loader.gif) center no-repeat #fff;
+              }
+            </style>
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/DateTimePicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/product.css" />
+    
+  <link href="css/chat.css" rel="stylesheet">
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="font-family: 'Open Sans', sans-serif;background-color: #B2DFDB;">
+    
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5M227H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M227H');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<div class="se-pre-con"></div>
+    <center>
+    <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" style="padding-top: 12px;">
+        <div>
+            <div class="navbar-header page-scroll" style="padding-top: 7px;">
+                <a href="index.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color:white;float:left;margin-left:15px;"></span></a>
+                <a class="navbar-brand page-scroll" href="index.html" id="logo_id" style="color:white;font-weight: 600;padding-top: 0px;">AQITA</a>
+                <a class="navbar-brand page-scroll" href="#page-top" style="color:white;font-weight: 600;padding-top: 0px;margin-left:auto;margin-left:auto;"><div style="position: fixed;top: 10px;"><div id="logo" style="width:200px;white-space: nowrap;overflow:hidden !important;text-overflow: ellipsis;"></div><small id="tags_id_id" style="font-size: 61%;"></small></div></a>
+            </div>
+        </div>
+    </nav>
+    <input type="hidden" id="refreshed" value="no">
+    <section id="intro" class="intro-section container">
+                <ul class="nav nav-tabs" id="fixed">
+                    <li id="details_id_tab" class="ggg"><a href="#details" data-toggle="tab" style="color:black;font-size: 12px;font-weight:600;" class="mck-box-close mck-close mck-close-sidebox" data-dismiss="modal" id="details_click">Store Details</a>
+                    </li>
+                    <li class="active ggg" id="order_id_tab"><a href="#home" data-toggle="tab" style="color:black;font-size: 12px;font-weight:600;" class="mck-box-close mck-close mck-close-sidebox" data-dismiss="modal" onclick="order_click();">Enquire</a>
+                    </li>
+                    <li class="ggg" id="chat_id_tab"><a href="#chat" data-toggle="tab" style="color:black;font-size: 12px;font-weight:600;" onclick="chat_click();">Chat</a>
+                    </li>
+                </ul>
+              <div class="tab-content tab-content-border" style="padding-top:44px;padding-bottom:0px;" >
+                <div class="tab-pane fade active in"  id="home" style="overflow-y: auto;margin-bottom:50px;">
+                     <div style="position:fixed;bottom:0;height:50px;padding-left:20px;padding-right:20px;padding-top:7px;padding-bottom:7px;border-top: 1px solid #ccc;background: white;" id="bottom_id"><strong id="rs_id">Rs <span id="cost"></span></strong><button type="button" class="btn btn-warning" id="order_id" style="margin-left:0px;width: 60%;" onclick="checkout();">Enquire</button></div>
+                </div>
+                <div class="tab-pane fade" id="chat" style="padding-left:10px;">
+                </div>
+                <div class="tab-pane fade" id="details">
+                        
+                    <div id="store_list" style="postion:fixed;">
+
+                    </div>
+              </div>
+            </div>
+
+    </section>
+    <script src="js/cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ripple.min.js"></script>
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/cookie.js"></script>
+    <script type="text/javascript">
+        function activaTab(tab){
+            $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+        }
+    </script>
+    <script type="text/javascript">
+      onload=function(){
+      var e=document.getElementById("refreshed");
+      if(e.value=="no")e.value="yes";
+      else{e.value="no";location.reload();}
+      }
+    </script>
+    <script src="js/product.js"></script>
+  </center>
+</body>
+<link rel="stylesheet" type="text/css" href="css/chat.css">
+</html>

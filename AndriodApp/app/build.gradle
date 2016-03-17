@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.aqitapartners.sellers"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 10
+        versionName "1.9"
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile('org.apache.httpcomponents:httpmime:4.3.5') {
+        exclude module: 'org.apache.httpcomponents:httpclient'
+    }
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    compile 'org.apache.httpcomponents:httpcore:4.3.3'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.googlecode.libphonenumber:libphonenumber:7.0.1'
+    compile 'com.google.android.gms:play-services:8.1.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.android.support:support-v4:23.1.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+//    compile 'com.applozic.communication.uiwidget:mobicomkitui:3.016'
+    compile 'com.android.support:multidex:1.0.1'
+   /* compile files('libs/org.eclipse.paho.android.service-1.0.1-20150206.050545-73-sources.jar')
+    compile files('libs/org.eclipse.paho.client.mqttv3-1.0.2.jar')*/
+}

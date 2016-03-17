@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AQITA</title>
+    <meta name="theme-color" content="#20B2AA">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripple.min.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-color: #B2DFDB;">
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5M227H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M227H');</script>
+<!-- End Google Tag Manager -->
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand page-scroll" href="index.html" style="color:white;padding-top: 20px;" id="logo">AQITA</a>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section style="margin-top:20px; color:white;">
+        <div  id="chat">
+              <div class="container" style="padding-top:60px;padding-top: 60px;border-bottom: 2px solid #ccc;padding-bottom: 20px;">
+
+
+                <form role="form">
+                  <center style="margin-top: 10px;"><span style="color:#585050;font-weight:600;font-family: 'Tahoma', 'Geneva', sans-serif;font-size:18px;">Hey, Login to Chat and Order!</span></center>
+                  <div id="message" class="modal fade" role="dialog" style="z-index:100000000;">
+                  <div class="modal-dialog" style="margin-top:50px;">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <p id="modal_data" style="color:black;text-align:center;"></p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                  <span id="error" style="color:red;"></span>
+                  <div class="form-group" style="margin-top:20px;">
+                    <input type="email" class="form-control" placeholder="Email" id="login-username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" id="login-password">
+                  </div><center>
+                  <button type="button" onclick="login();" id="login_btn" class="btn btn-warning" style="width:90%;border-radius: 5% !important;">Login</button></center>
+                </form>
+
+              </div>
+              <center style="margin-top: 20px;"><span style="color:#585050;font-weight:600;font-family: 'Tahoma', 'Geneva', sans-serif;font-size:18px;">First Time User? Sign Up!</span></center>
+
+              <div class="container" style="padding-bottom:30px;">
+                <form role="form">
+                    <span id="error2" style="color:red;"></span>
+                    <div class="form-group" style="margin-top:20px;">
+                      
+                      <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group" style="margin-top:20px;">
+                      
+                      <input type="email" class="form-control" id="email_r" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      
+                      <input type="password" class="form-control" id="pwd_r" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      
+                      <input type="password" class="form-control" id="c_pwd" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group" style="color:#585050;display: inline;">
+                      <input type="checkbox" name="vehicle" value="true" style="display: inline;    width: 30px;margin-bottom:20px;" id="tc_id"><a href="tc.html">I agree to the Terms and Conditions</a>
+                    </div>
+                    <center>
+                    <button type="button" class="btn btn-warning" id="sign_up" style="width:90%;    border-radius: 5% !important;" onclick="register();">Sign Up</button></center>
+                  </form>
+              </div>
+          </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    $.ripple(".btn", {
+    debug: false,
+    on: 'mousedown',
+    opacity: 0.4, 
+    color: "auto",
+    multi: false,
+    duration: 0.7,
+    rate: function(pxPerSecond) {
+        return pxPerSecond;
+    },
+
+    easing: 'linear'
+});
+});
+    $("#login-password").keypress(function(e) {
+        if(e.which == 13) {
+        $("#login_btn").click();
+        }
+    });
+    $("#c_pwd").keypress(function(e) {
+        if(e.which == 13) {
+        $("#sign_up").click();
+        }
+    });
+        function login(){
+            var username = $('#login-username').val();
+            var pass = $('#login-password').val();
+            if(username && pass){
+               $.get( "http://52.76.118.161:7070/api/v1/verifyUser",{email:username, password:pass}, function( data ) {
+                      data2 = JSON.parse(data);
+                      if(data2.authenticated == true){
+                          var json_data = JSON.parse(data);
+                          document.cookie = json_data.storeId;
+                          setCookie("userId", json_data.id, 30);
+                          setCookie("name", json_data.name, 30);
+                          setCookie("phone", json_data.phone, 30);
+                          setCookie("address1", json_data.addressline1, 30);
+                          setCookie("address2", json_data.addressline2, 30);
+                          setCookie("landmark", json_data.landmark, 30);
+                          $("#error").empty();
+                          window.location.replace("index.html");
+
+                      }
+                      else{
+                        $("#error").html("Invalid Email or Password");
+                      }
+                  });
+            }
+            else{
+              $("#error").html("Please enter all fields");
+            }
+        }
+        function register(){
+            var nam = $('#name').val();
+            var email_r = $('#email_r').val();
+            var pwd_r = $('#pwd_r').val();
+            var c_pwd = $('#c_pwd').val();
+            var tc = $("#tc_id:checkbox:checked");
+            var gggg = tc.length;
+            if(nam && email_r && pwd_r && c_pwd){
+              if(gggg){
+                $("#error").empty;
+                if(pwd_r == c_pwd){
+
+                 $.get( "http://52.76.118.161:7070/api/v1/createUser",{name:nam, email:email_r, password:pwd_r}, function( data ) {
+                        var data2 = JSON.parse(data);
+                        if(data2.successful == true){
+                            var json_data = JSON.parse(data);
+                            document.cookie = json_data.storeId;
+                            setCookie("userId", json_data.userId, 30);
+                            setCookie("name", json_data.name, 30);
+                            console.log(json_data.id);
+                            $("#error").empty();
+                            $("#modal_data").html("Thank you for Registering.");
+                            $('#message').modal('show');
+                            window.location.replace("index.html");
+                            
+                        }
+                        else{
+                          $("#error2").html("Email already in use");
+                        }
+                    });
+               }
+               else{
+                    $("#error2").html("Passwords do not match");
+
+               }
+             }
+             else{
+                    $("#error2").html("Please agree to our Terms and Conditions");
+
+               }
+            }
+            else{
+              $("#error2").html("Please enter all fields");
+            }
+        }
+    </script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ripple.min.js"></script>
+
+</body>
+
+</html>

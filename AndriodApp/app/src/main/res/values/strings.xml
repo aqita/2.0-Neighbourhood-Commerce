@@ -1,0 +1,616 @@
+<resources>
+    <string name="app_name">Aqita Partners</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="default_media_location_folder">Aqita Partners</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+
+    <string name="application_key">2f5889429834046949516164f3617897</string>
+
+
+    <string name="internet_connection_not_available">No internet connection</string>
+
+    <string name="menu_search">Search</string>
+    <string name="menu_add_contact">Create a new contact</string>
+    <string name="menu_edit_contact">Edit Contact</string>
+    <string name="no_contacts">No Contacts Found</string>
+    <string name="no_contact_selected">No Contact Selected</string>
+    <string name="search_hint">Email, userId, number</string>
+    <string name="activity_contacts_list">MobiTexter</string>
+    <string name="activity_contacts_title">Select contact</string>
+    <string name="activity_contact_detail">Contact Detail</string>
+    <string name="contacts_list_search_results_title">Contact search for \"%s\"</string>
+    <string name="contactsListActivity">Contact List</string>
+    <string name="phone_number_not_present">Phone number is not present</string>
+    <string name="mobiframework_title_device">Device</string>
+    <string name="mobiframework_title_group">Group</string>
+    <string name="zero_friends_on_phone">No matching contact found on phone contacts but you can still send message by entering the email, userId or phone number</string>
+    <string name="contact_sync_in_progress">Contact sync is in progress, might take few mins</string>
+    <string name="zero_friends_on_mobitexter">No contacts on mobitexter</string>
+    <string name="zero_groups_on_phone">No groups, add groups in your mobile or gmail account</string>
+    <string name="delete_thread_text">Deleting....</string>
+
+
+    <!--
+         Used for the AlphabetIndexer in ContactsListFragment to provide quick navigation by
+         alphabet using ListView fast scroll.
+    -->
+    <string name="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name ="last_seen_at_time">Last seen</string>
+    <string name="is_typing">is typing...</string>
+    <string name="user_online">Online</string>
+
+
+    <!--
+         When using ContactsContract.Contacts#CONTENT_FILTER_URI to search contacts, a match occurs
+         when using a number of different fields, such as name, e-mail address, address, phone
+         number, etc. When a match occurs that is not the name, there is currently no way to tell
+         which other field was matched. This string is displayed in the secondary display text in
+         ContactsListFragment when a search query match occurs that is not the display name.
+    -->
+    <string name="search_match_other">Matches Other Field</string>
+    <string name="invite">Invite your friends</string>
+    <array name="alphabet_color">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+    <dimen name="tile_letter_font_size">250dp</dimen>
+    <!-- The deafult tile size -->
+    <dimen name="letter_tile_size">64dp</dimen>
+
+    <string name="send_text">SEND</string>
+    <string name="cancel_text">CANCEL</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="terms_condition">TERMS AND CONDITIONS \n\n
+
+Aqita Technologies Pvt Ltd, a Private Limited Company under the Companies Act, 1956
+
+having its office at 10/7, Meanee Avenue Road, Ulsoor, who is the owner of the mobile
+
+application Aqita Partners (the “Application Provider”) reserves all rights not expressly
+
+granted to you under these Terms and Conditions. Aqita Partners mobile application, the
+
+product that is subject to these Terms and Conditions is hereafter referred to as the
+
+“Licensed Application”.\n\n
+
+Scope of License\n
+
+This license granted to you for the Licensed Application by the Application Provider, is
+
+limited to a non-exclusive, non-transferable, license to use the Licensed Application on
+
+any Android™ device that you own or control. This license does not allow you to use the
+
+Licensed Application on any Android™ device that you do not own or control, and you
+
+may not distribute or make the Licensed Application available over a network where it
+
+could be used by multiple devices at the same time. Nothing contained in the Licensed
+
+Application should be considered as granting you, by implication or otherwise, any
+
+license or right to use any trade-marks, logos, or other names contained in the Licensed
+
+Application. You may not rent, lease, lend, sell, redistribute or sublicense the Licensed
+
+Application. You may not copy, decompile, reverse engineer, disassemble, attempt to
+
+derive the source code of, modify, or create derivative works of the Licensed Application,
+
+any updates, or any part thereof (except as and only to the extent any foregoing
+
+restriction is prohibited by applicable law or to the extent as may be permitted by the
+
+licensing terms governing use of any open sourced components included within the
+
+Licensed Application). Any attempt to do so is a violation of the rights of the Application
+
+Provider and its licensors. If you breach this restriction, you may be subject to
+
+prosecution and damages. The terms of the license will govern any upgrades provided by
+
+the Application Provider that replace and/or supplement the original Licensed Application,
+
+unless such upgrade is accompanied by a separate license in which case the terms of
+
+that license will govern its use.\n\n
+
+User Access and Consent to Use of Data\n
+
+By downloading and registering with the Licensed Application, you represent that you are
+
+not barred by any law, in any jurisdiction or bound by any agreement that restricts your
+
+rights to access, download and register with the Licensed Application, to provide services
+
+to and receive payments from customers who use the Aqita application belonging to the
+
+Application Provider.\n
+
+In order to register with the Licensed Application you will have to provide your mobile
+
+number, name (in the event that your business is a sole proprietorship and the business
+
+is in your personal name), and business name. You will ensure that the mobile number
+
+provided for registration with the Licensed Application is your own and does not belong
+
+to any third party and that it is a valid and existing mobile number. You will ensure that
+
+you will not (i) use a business name of another person with an intent to impersonate that
+
+person; (ii) use a business name in which another person has proprietary rights without
+
+such person’s written authorization submitted to support@aqita.in; and (iii) use a
+
+pseudonym or aliases as your business name. In order to connect with the relevant
+
+customers, you can create a profile for your business by providing details like address,
+
+description of business and services, pictures, etc\n
+
+You agree to (a) provide true, accurate, current and complete information about yourself
+
+as required during registration and in your profile and (b) maintain and promptly update
+
+the information to keep it true, accurate, current and complete. If you provide any
+
+information that is untrue, inaccurate, not current or incomplete, or if the Application
+
+Provider has reasonable grounds to suspect that such information is untrue, inaccurate,
+
+not current or incomplete, the Application Provider has the right to suspend or terminate
+
+your account and/or refuse any or all current or future use of the Licensed Application.
+
+You will solely be responsible for all usage or activity in your account after registration
+
+with the Licensed Application, including use of the account by any third party authorized
+
+by you. You agree that you will not use the Licensed Application to post pornographic
+
+content or content that may be deemed offensive, indecent, or objectionable, which
+
+content may or may not be identified as having explicit language or market, or sell
+
+business, products or services that is illegal. Any fraudulent, abusive, misuse or
+
+otherwise illegal activity may be grounds for removal of such content and/or termination
+
+of your account at the Application Provider’s sole discretion. You will immediately notify
+
+the Application Provider at support@aqita.in of any known or suspected unauthorized
+
+use(s) of your account, or any known or suspected breach of security. The Application
+
+Provider will not be liable for any losses caused to you, whether directly or indirectly for
+
+any unauthorised use of your account or for your failure or delay to intimate the
+
+Application Provider of known or suspected unauthorized use(s) of your account, or any
+
+known or suspected breach of security. You acknowledge, consent and agree that the
+
+Application Provider may access, preserve or disclose your account information,
+
+including but not limited to registration and profile information, financial information such
+
+as bank account details, and related personal information, such as your name, address,
+
+mobile number, date of birth, etc (that you may have to submit in order to receive
+
+payments from the customers), if required to do so by law or in good faith, believing that
+
+such access, preservation or disclosure is reasonably necessary to (a) comply with legal
+
+process or the order of any Government authority; (b) enforce the Terms and Conditions;
+
+(c) respond to claims that the registration and profile information violates the rights of
+
+third parties; (d) carry out fraud verification in relation to any financial information
+
+provided by you; (e) respond to your requests for customer service; or (f) protect the
+
+rights, property or personal safety of the Application Provider, its users and the public.
+
+You acknowledge and agree that upon your registration and use of the Licensed
+
+Application, the Application Provider will collect, use, store and archive information in
+
+accordance with the aforementioned privacy policy.\n\n
+
+Payment Gateway\n\n
+
+The Licensed Application makes available a payment gateway through its approved
+
+payment processing provider(s). Your use of the payment gateway will be subject to
+
+receiving an approved status by the Application Provider, fulfilling the documentation and
+
+other requirements of the approved payment processing provider(s) and adhering to the
+
+terms and conditions of use prescribed by the payment processing provider(s). Please
+
+contact us at support@aqita.in to understand if you qualify to avail of this service.
+
+You acknowledge and understand that the payment gateway services made available
+
+through the Licensed Application are owned, controlled and provided by the payment
+
+processing provider(s) and hence, the Application Provider does not warrant and in no
+
+way will be liable for the timeliness of such services and the receipt of customer
+
+payments through such services. Termination
+
+\n\nPAYMENT ACTIVATION\n\n
+
+Aqita Business application offers chat services as the default feature for the partner.
+
+Ability to take online payments is subject to additional registration with us based on the
+
+Know Your Customer norms adherence. The policy and requirements to activate payments
+
+for a particular partner is determined by Aqita in accordance with the law of the land.
+
+Businesses which are prohibited by the law for taking online payments is not permitted to
+
+take online payments via Aqita as well. Additionaly, any business, which voilates any law
+
+can be deactivated by us immediately without further notice.
+
+All the online payments going through Aqita will be subject to a fee known as Transaction
+
+Discount Rate (TDR). The TDR applicable to your business will be communicated to you
+
+via Aqita Business application, email, message on the app or any other form of
+
+communication from the Aqita team. In case of any query about the same, you can write
+
+to support@aqita.in
+
+\n\nLicense, Rights and Deactivation\n\n
+
+The license to the Licensed Application is effective until terminated by you or by the
+
+Application Provider in the following circumstances:\n
+
+(i) When you delete your account of your own accord or send an email to
+
+support@aqita.in requiring deletion of your account; (ii) When the Application Provider
+
+ceases to make available the Licensed Application with the provision of 14 days notice.
+
+Additionally, your rights under this license will terminate automatically without notice
+
+from the Application Provider, if you fail to comply with any term(s) set out in these Terms
+
+and Conditions. In such event, the Application Provider reserves the rights to delete your
+
+account and deny you access to the Licensed Application. Upon termination of the
+
+license for any reason, you shall cease all use of the Licensed Application, and destroy all
+
+copies, full or partial, of the Licensed Application.
+
+[Note: Merely un-installing the Licensed Application from your mobile device will not
+
+result in the deletion of your account or information from the Licensed Application and
+
+you will have to send an email to support@aqita.in if you wish to delete your account or
+
+information from the Licensed Application databases and servers.\n\n
+
+Services and Third Party Material\n\n
+
+The Licensed Application enables you to connect with relevant customers of your
+
+business. Use of the Licensed Application requires Internet access on your mobile device.
+
+You understand and acknowledge that the Application Provider only enables you to
+
+connect with the customers who wish to source/procure services from you and does not
+
+provide any guarantees in relation to minimum number of customers, market for your
+
+business, etc. You understand and acknowledge that the Application Provider does not
+
+warrant the suitability of the Licensed Application to conduct your or any third party’s
+
+business through the Licensed Application or the success of such conduct. The
+
+Application Provider disclaims all liability in relation to any transactions, contract or
+
+arrangement entered into between you and the customer(s) through the Licensed
+
+Application, including the delivery of any products or services through the Licensed
+
+Application and will not be responsible for any breach of such contracts or to any claims
+
+for losses, costs, damages, expenses or other legal action arising out of such
+
+transactions, contracts or arrangements.\n
+
+You understand that by using the Licensed Application, you may encounter content that
+
+may be deemed offensive, indecent, or objectionable, which content may or may not be
+
+identified as having explicit language, and that the results of any search or entering of a
+
+particular URL may automatically and unintentionally generate links or references to
+
+objectionable material. Nevertheless, you agree to use the Licensed Application at your
+
+sole risk and that the Application Provider shall not have any liability to you for content
+
+that may be found to be offensive, indecent, or objectionable. You also understand that
+
+any information (including personal information) you may share with any third parties,
+
+customers or other users of the Application Provider’s other licensed applications whilst
+
+using the interactive features of the Licensed Application (such as chat, messaging, etc)
+
+will be solely at your risk as to the security of such information and the Application
+
+Provider cannot guarantee the security of such information or the nature of its use by the
+
+third parties to whom you disclose such information.\n
+
+The Licensed Application may display, include or make available content, data,
+
+information, applications or materials, from third parties, content providers or other users
+
+of the Licensed Applications (collectively and individually called “Third Party Materials”).
+
+By using the Licensed Application, you acknowledge and agree that the Application
+
+Provider is not responsible for examining or evaluating the content, accuracy,
+
+completeness, timeliness, validity, copyright compliance, legality, decency, quality or any
+
+other aspect of such Third Party Materials or web sites. The Application Provider does not
+
+warrant or endorse and does not assume and will not have any liability or responsibility to
+
+you or any other person for any third-Third Party Materials or web sites, or for any other
+
+materials, products, or services of third parties. Before executing any transaction based
+
+upon information obtained from the customers, you should personally verify the accuracy
+
+of such information.
+
+You agree that the Licensed Application contains proprietary content, information and
+
+material that is protected by applicable intellectual property and other laws, including but
+
+not limited to copyright, and that you will not use such proprietary content, information or
+
+materials in any way whatsoever except for permitted use of the Licensed Application.
+
+You agree not to modify, rent, lease, loan, sell, distribute, or create derivative works of the
+
+Licensed Application, in any manner, and you shall not exploit the Licensed Application in
+
+any unauthorized way whatsoever, including but not limited to, by trespass or burdening
+
+network capacity. You further agree not to use the Licensed Application in any manner to
+
+harass, abuse, stalk, bully, threaten, defame, impersonate, gamble, exhibit or transmit
+
+sexually explicit, pornographic, pedophilic content, promulgate hate speech, carry out
+
+illegal activities or otherwise infringe or violate the rights of any other party or other users
+
+of the Licensed Application. You also agree that the Application Provider is not in any way
+
+responsible for any such use by you, nor for any harassing, threatening, defamatory,
+
+offensive or illegal messages or transmissions that you may receive as a result of using
+
+the Licensed Application.\n
+
+The Application Provider makes no representations that the services provided through
+
+the Licensed Application and Third Party Materials are appropriate or available for use in
+
+any particular location. To the extent you choose to access the Licensed Application or
+
+Third Party Materials, you do so at your own initiative and are responsible for compliance
+
+with any applicable laws, including but not limited to applicable local laws. The
+
+Application Provider, and its licensors, reserve the right to change, suspend, remove, or
+
+disable access to the Licensed Application at any time without notice. In no event will the
+
+Application Provider be liable for the removal of or disabling of access to any services
+
+provided through the Licensed Application. The Application Provider may also impose
+
+limits on the use of or access to the customers and services, in any case and without
+
+notice or liability.
+
+\n\nADVERTISEMENTS\n\n
+
+The Application Provider or any third party advertisers may display advertisements and
+
+promotions on the Licensed Application. The manner, mode and extent of advertising by
+
+the Application Provider on the Licensed Application are subject to change. By clicking
+
+on any advertisements you may leave the Licensed Application and be directed to an
+
+external application/website, or to an application/website maintained by an entity other
+
+than the Application Provider. If you decide to visit any such website, you do so at your
+
+own risk and it is your responsibility to take all protective measures to guard against
+
+viruses or other destructive elements. The Application Provider makes no warranty or
+
+representation regarding, and does not endorse, any linked websites or the information
+
+appearing thereon or any of the products or services described thereon.
+
+The Application Provider makes no warranty or representation regarding the
+
+merchantability, fitness for particular purpose, availability, efficacy, reliability, durability
+
+of any product or service advertised on the Licensed Application.
+
+\n\nNO WARRANTY\n\n
+
+YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE LICENSED
+
+APPLICATION IS AT YOUR SOLE RISK AND THAT THE ENTIRE RISK AS TO
+
+SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT IS WITH YOU. TO
+
+THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED
+
+APPLICATION AND ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED
+
+APPLICATION ("SERVICES") ARE PROVIDED "AS IS" AND “AS AVAILABLE”, WITH ALL
+
+FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND THE APPLICATION PROVIDER
+
+HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE
+
+LICENSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED OR
+
+STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR
+
+CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A
+
+PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NON-
+
+INFRINGEMENT OF THIRD PARTY RIGHTS. APPLICATION PROVIDER DOES NOT
+
+WARRANT AGAINST INTERFERENCE WITH YOUR ENJOYMENT OF THE LICENSED
+
+APPLICATION, THAT THE FUNCTIONS CONTAINED IN, OR SERVICES PERFORMED OR
+
+PROVIDED BY, THE LICENSED APPLICATION WILL MEET YOUR REQUIREMENTS, THAT
+
+THE OPERATION OF THE LICENSED APPLICATION OR SERVICES WILL BE
+
+UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE LICENSED
+
+APPLICATION OR SERVICES WILL BE CORRECTED. NO ORAL OR WRITTEN
+
+INFORMATION OR ADVICE GIVEN BY APPLICATION PROVIDER OR ITS AUTHORIZED
+
+REPRESENTATIVE SHALL CREATE A WARRANTY. SHOULD THE LICENSED
+
+APPLICATION OR SERVICES PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF
+
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION. SOME JURISDICTIONS DO
+
+NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON
+
+APPLICABLE STATUTORY RIGHTS OF A CONSUMER, IN SUCH CASES THE ABOVE
+
+EXCLUSION AND LIMITATIONS WILL APPLY TO YOU TO THE EXTENT PERMISSABLE BY
+
+LAW.\n\n
+
+LIMITATION OF LIABILITY\n\n
+
+IN NO EVENT SHALL THE APLLICATION PROVIDER OR ANY OF ITS SUBSIDIARIES OR
+
+AFFILIATES BE LIABLE TO YOU OR ANY PERSON FOR ANY DIRECT, INDIRECT,
+
+SPECIAL, CONSEQUENTIAL OR OTHER DAMAGES (INCLUDING, WITHOUT LIMITATION,
+
+ANY LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF INFORMATION OR
+
+PROGRAMS OR OTHER DATA ON YOUR INFORMATION HANDLING SYSTEM) THAT ARE
+
+RELATED TO THE USE OF, OR THE INABILITY TO USE, THE SERVICES AND FUNCTIONS
+
+OF THE LICENSED APPLICATION OR ANY LINKED WEB SITE/ MOBILE APPLICATION,
+
+EVEN IF THE APPLICATION PROVIDER IS EXPRESSLY ADVISED OF THE POSSIBILITY
+
+OF SUCH DAMAGES.\n\n
+
+INDEMNITY\n\n
+
+You agree to indemnify and hold harmless the Application Provider, its subsidiaries and
+
+affiliates from any claim, cost, expense, judgment or other loss relating to your use of the
+
+Licensed Application, including without limitation of the foregoing, any action you take
+
+which is in violation of these Terms and Conditions.
+
+\n\nCHOICE OF LAW\n\n
+
+These Terms and Conditions shall be governed by the laws of Republic of India without
+
+giving effect to its conflict of laws provisions. These Terms and Conditions shall be
+
+subject to the exclusive jurisdiction of the courts at Bangalore, India.
+
+\n\nNO THIRD PARTY BENEFICIARIES\n\n
+
+This contract is solely for your benefit and the benefit of Application Provider.
+
+\n\nSEVERABILITY\n\n
+
+If for any reason a court of competent jurisdiction finds any provision or portion of these
+
+Terms and Conditions to be unenforceable, the remainder of these Terms and Conditions
+
+will continue in full force and effect. Please email us at support@aqita.in if you have any
+
+questions regarding these Terms and Conditions.
+
+\n\nANDROID™ TERMS OF USE\n\n
+
+You will be governed by any additional terms of use that may be specified by the
+
+Android™ store or platform from which you downloaded this Licensed Application.
+
+I HAVE READ THE FULL END USER LICENSING AGREEMENT AND AGREE TO ALL OF
+
+THE PROVISIONS CONTAINED ABOVE. I hereby agree to these End User Licensing
+
+Agreement</string>
+
+
+</resources>

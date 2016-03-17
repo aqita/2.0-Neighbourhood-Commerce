@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:site_name" content="Aqita" />
+    <meta property="og:title" content="Find stores near you!" />
+    <meta property="og:description" content="Discover, chat and order; grocery, medicines, laundry, household services in your locality" />
+    <meta property="og:image" itemprop="image" content="http://aqita.in/icon.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1453466434" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Aqita - Discover | Chat | Order</title>
+    <meta name="theme-color" content="#20B2AA">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripple.min.css" rel="stylesheet">
+    <script type="text/javascript">(function (d, n) {
+                var s, h;
+                s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://apps.applozic.com/sidebox.app";
+                h = document.getElementsByTagName('head')[0];
+                h.appendChild(s);
+                window.applozic = n;
+                n.init = function (t) {
+                    n._globals = t;
+                }
+            })(document, window.applozic || {});</script>
+            <style type="text/css">
+              .no-js #loader { display: none;  }
+              .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+              .se-pre-con {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 99999999888888;
+                background: url(img/loader.gif) center no-repeat #fff;
+              }
+            </style>
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">  
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="font-family: 'Open Sans', sans-serif;background-color: #B2DFDB;">
+    
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5M227H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M227H');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+<div class="se-pre-con"></div>
+    <center>
+    <nav class="navbar navbar-default navbar-fixed-top container" role="navigation">
+        <div >
+            <div class="navbar-header page-scroll" style="width:100%;">
+                <a class="navbar-brand page-scroll" href="#" id="logo_id" style="color:white;font-weight: 600;">AQITA</a>
+                <a ><span class="glyphicon glyphicon-user" onclick="window.location.replace('profile.html');" style="cursor: pointer; cursor: hand;" id="profileicon2" style=""></span></a>
+                <a href="http://aqita.in/about-us/" target="_blank">
+                  <span class="glyphicon glyphicon-info-sign" id="profileicon" aria-hidden="true" style="" ></span></a>
+            </div>
+        </div>
+        
+    </nav>
+    <input type="hidden" id="refreshed" value="no">
+    <section id="intro" class="intro-section container" >
+                <ul class="nav nav-tabs" id="fixed" >
+                    <li class="active ggg"><a href="#home" data-toggle="tab" style="color:black;font-size: 14px;font-weight:600;" class="mck-box-close mck-close mck-close-sidebox" data-dismiss="modal">Stores</a>
+                    </li>
+                    <li class="ggg"><a href="#chat" data-toggle="tab" style="color:black;font-size: 14px;font-weight:600;" onclick="chatclick();">Chat</a>
+                    </li>
+                </ul>
+                <div class="tab-content tab-content-border">
+                    <div class="tab-pane fade active in" id="home" style="overflow-y: auto;">
+                    <div id="slect" class="container" style="border: 1px solid #ddd;padding-bottom:20px; background-image: url('img/backdrop.jpg');height:200px;padding-left: 0px;padding-right: 0px;background-size: cover;" >
+                            <div style="height:70px;"></div>
+                            <span style="font-size:26px;color:white;display:block;" id="tagline">Find, Chat and Order from Stores Near You</span>
+                            <div style="width:60%;float:left;padding-left:10px;margin-top:15px;"><span style="color:white;font-size:16px;">I want</span>
+                            <select class="form-control" id="cate" style="border: 2px solid transparent;border-bottom-color: white;color: white;background:transparent;width:75%;display: inline;" onchange="filter();">
+                              <option style="color:black;">--</option>
+                              <option style="color:black;">Grocery</option>
+                              <option style="color:black;">Daily Tiffin</option>
+                              <option style="color:black;">Wine Shops</option>
+                              <option style="color:black;">Medical Stores</option>
+                              <option style="color:black;">Salons and Spas</option>
+                              <option style="color:black;">Kitchen and Dining</option>
+			      <option style="color:black;">Household Services</option>                              
+ 			      <option style="color:black;">Laundry</option>
+                              <option style="color:black;">Electronic Repair</option>
+                            </select>
+                            </div>
+                            <div style="width:40%;float:right;text-align: left;margin-top:15px;">
+                            <span style="color:white;font-size:16px;">at</span>
+                            <select class="form-control" id="area_id" style="border: 2px solid transparent;border-bottom-color: white;color: white;background:transparent;display: inline;width:75%;" onchange="filter();">
+                              <option style="color:black;">--</option>
+                              <option style="color:black;">Cox Town</option>
+                              <option style="color:black;">Cooke Town</option>
+                              <option style="color:black;">Frazer Town</option>
+                              <option style="color:black;">Ulsoor</option>
+                              <option style="color:black;">Kammanahalli</option>
+                            </select>
+                            </div>
+                            </div>
+                    <div id="store_list" style="postion:fixed;">
+                    </div>
+                    <div id="book_button" style="background-color:#20B2AA;color:white;width:100%;height:40px;padding-top:10px;position:fixed;bottom:0;display:none;"><center>Book</center></div>
+                    </div>
+                    <div class="tab-pane fade" id="chat">
+                        <div class="container" style="padding-top:60px;padding-top: 60px;border-bottom: 2px solid #ccc;padding-bottom: 20px;">
+
+                <form role="form">
+                  <center style="margin-top: 10px;"><span style="color:#585050;font-weight:600;font-family: 'Tahoma', 'Geneva', sans-serif;font-size:18px;">Hey, Login to Chat and Order!</span></center>
+                  <span id="error" style="color:red;float:left;margin-bottom:15px;"></span>
+                  <div class="form-group" style="margin-top:20px;">
+                    <input type="email" autocomplete="off" class="form-control" placeholder="Email" id="login-username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" id="login-password">
+                  </div><center>
+                  <button type="button" onclick="login();" id="login_btn" class="btn btn-warning" style="width:90%;border-radius: 5% !important;">Login</button></center>
+                </form>
+
+              </div>
+              <center style="margin-top: 20px;"><span style="color:#585050;font-weight:600;font-family: 'Tahoma', 'Geneva', sans-serif;font-size:18px;">First Time User? Sign Up!</span></center>
+
+              <div class="container" style="padding-bottom:30px;">
+                <div id="message" class="modal fade" role="dialog" style="z-index:100000000;">
+                  <div class="modal-dialog" style="margin-top:50px;">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <p id="modal_data"></p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <form role="form">
+                    <span id="error2" style="color:red;float:left;margin-bottom:15px;"></span>
+                    <div class="form-group" style="margin-top:20px;">
+                      
+                      <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group" style="margin-top:20px;">
+                      
+                      <input type="email" autocomplete="off" class="form-control" id="email_r" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      
+                      <input type="password" class="form-control" id="pwd_r" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      
+                      <input type="password" class="form-control" id="c_pwd" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group" style="color:#585050;display: inline;">
+                      <input type="checkbox" name="vehicle" value="true" style="display: inline;    width: 30px;margin-bottom:20px;" id="tc_id"><a href="tc.html">I agree to the Terms and Conditions</a>
+                    </div>
+                    <center>
+                    <button type="button" class="btn btn-warning" style="width:90%;    border-radius: 5% !important;" id="sign_up" onclick="register();">Sign Up</button></center>
+                  </form>
+              </div>
+                    </div>
+                </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ripple.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+  </center>
+</body>
+<link rel="stylesheet" type="text/css" href="css/chat2.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+  $("#mck-msg-new").click(function() {
+   window.location.replace("index.html");
+  
+});
+
+</script>
+<script type="text/javascript">
+  onload=function(){
+  var e=document.getElementById("refreshed");
+  if(e.value=="no")e.value="yes";
+  else{e.value="no";location.reload();}
+  }
+</script>
+</html>

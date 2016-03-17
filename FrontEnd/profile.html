@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AQITA</title>
+    <meta name="theme-color" content="#20B2AA">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripple.min.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-color: #B2DFDB;">
+    
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5M227H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M227H');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<center>
+    <nav class="navbar navbar-default navbar-fixed-top container" role="navigation">
+        <div >
+            <div class="navbar-header page-scroll" syle="width:100%;">
+                <a class="navbar-brand page-scroll" href="index.html" id="logo_id" style="color:white;font-weight: 600;">AQITA</a>
+            </div>
+        </div>
+    </nav>
+    <section id="intro" class="intro-section container" >
+                <div id="message" class="modal fade" role="dialog" style="z-index:100000000;">
+                            <div class="modal-dialog" style="margin-top:50px;">
+
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                  <p id="modal_data"></p>
+                                </div>
+                              </div>
+
+                            </div>
+                </div>
+                <div style="padding-left:10px;padding-right:10px;padding-top:30px;">
+                  <span style="font-size:16px;font-weight:600;float:left;margin-left:10px;padding-bottom:10px;color:#757474;">My Account</span>
+                  <span id="error" style="color:red;"></span>
+                  <input type="text" class="form-control mar" class="inputsize" placeholder="Name" id="name">
+                  <input type="text" class="form-control mar" class="inputsize" placeholder="Phone Number" id="phone">
+                  <input type="text" class="form-control mar" class="inputsize" placeholder="Address Line 1" id="add1">
+                  <input type="text" class="form-control mar" class="inputsize" placeholder="Address Line 2" id="add2">
+                  <input type="text" class="form-control mar" class="inputsize" placeholder="Landmark" id="landmark" style="margin-bottom:30px;">
+                  <button type="button" onclick="info();" class="btn btn-warning" style="width:96%;border-radius:0px;">Update</button>
+                  <hr>
+                  <span style="font-size:16px;font-weight:600;float:left;margin-left:10px;padding-bottom:10px;color:#757474;">Change Password</span>
+                  <span id="error2" style="color:red;"></span>
+                  <input type="password" class="form-control mar" class="inputsize" placeholder="Old Password" id="oldpass">
+                  <input type="password" class="form-control mar" class="inputsize" placeholder="New Password" id="newpass">
+                  <input type="password" class="form-control mar" class="inputsize" placeholder="Confirm Password" id="conpass" style="margin-bottom:30px;">
+                  <button type="button" onclick="password();" class="btn btn-warning" style="width:96%;border-radius:0px;margin-bottom:20px;" >Update</button>
+                  <button type="button" onclick="setCookie('userId', '');setCookie('name', '');setCookie('phone', '');setCookie('address1', '');setCookie('address2', '');setCookie('landmark', '');window.location.href = 'index.html';" class="btn btn-warning" style="width:96%;border-radius:0px;margin-bottom:20px;" >Logout</button>
+                </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ripple.min.js"></script>
+
+    <script src="js/profile.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+  </center>
+</body>
+
+</html>
